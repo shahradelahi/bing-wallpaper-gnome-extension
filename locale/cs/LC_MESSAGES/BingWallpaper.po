@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: bing-wallpaper-gnome-extension\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-08-05 00:27+1000\n"
+"PO-Revision-Date: 2024-10-17 15:11+0200\n"
 "Last-Translator: Ludek Vydra <lvtran@u.k2.cz>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -16,9 +16,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
-#: ui/prefsadw.ui.h:1 extension.js:139
+#: ui/prefsadw.ui.h:1 extension.js:145
 msgid "Settings"
 msgstr "Nastavení"
 
@@ -146,99 +146,119 @@ msgstr "Debug logging"
 msgid "Enable logging to system journal"
 msgstr "Povolit logování do systémového žurnálu"
 
-#: ui/prefsadw.ui.h:33 extension.js:153
+#: ui/prefsadw.ui.h:33
+msgid "Advanced options"
+msgstr "Pokročilé možnosti"
+
+#: ui/prefsadw.ui.h:34 extension.js:159
 msgid "Always show new images"
 msgstr "Vždy zobrazit nové obrázky"
 
-#: ui/prefsadw.ui.h:34
+#: ui/prefsadw.ui.h:35
 msgid "Switch to new images when available (unless on random mode)"
 msgstr "Přepne na nové tapety, jakmile jsou k dispozici (ne při náhodném režimu)."
 
-#: ui/prefsadw.ui.h:35
+#: ui/prefsadw.ui.h:36
 msgid "Purge on trash"
 msgstr "Vysypat do koše"
 
-#: ui/prefsadw.ui.h:36
-msgid "Trashing an image will remove it from database"
-msgstr "Vymazání obrázku jej odstraní z databáze"
-
 #: ui/prefsadw.ui.h:37
+msgid "Trashing an image will remove it from database and disk"
+msgstr "Vymazání obrázku z disku i databáze"
+
+#: ui/prefsadw.ui.h:38
 msgid "Screen resolution"
 msgstr "Rozlišení obrazovky"
 
-#: ui/prefsadw.ui.h:38
+#: ui/prefsadw.ui.h:39
 msgid "Override automatic resolution selection"
 msgstr "Přebít automatický výběr rozlišení obrazovky"
 
-#: ui/prefsadw.ui.h:39
+#: ui/prefsadw.ui.h:40
 msgid "Random interval"
 msgstr "Náhodný interval"
 
-#: ui/prefsadw.ui.h:40
+#: ui/prefsadw.ui.h:41
 msgid "Custom shuffle interval when enabled"
 msgstr "Vlastní interval náhodného přepnutí, pokud je povolen"
 
-#: ui/prefsadw.ui.h:41
+#: ui/prefsadw.ui.h:42
+msgid "Delete older images"
+msgstr "Vymazání starších obrázků"
+
+#: ui/prefsadw.ui.h:43
+msgid "Automatically delete older images (excludes favourites)"
+msgstr "Automatické mazání starších snímků, s výjimkou oblíbených"
+
+#: ui/prefsadw.ui.h:44
+msgid "Number of days to keep images"
+msgstr "Počet dní pro uchování snímků"
+
+#: ui/prefsadw.ui.h:45
+msgid "Keep images for this number of days (favourites are kept forever)"
+msgstr "Uchovávat snímky po tento počet dní, oblíbené jsou uchovávány navždy"
+
+#: ui/prefsadw.ui.h:46
 msgid "Always export Bing data"
 msgstr "Vždy exportuj Bing data"
 
-#: ui/prefsadw.ui.h:42
+#: ui/prefsadw.ui.h:47
 msgid "Export Bing JSON when image data changes"
 msgstr "Exportuj Bing JSON když se data změní"
 
-#: ui/prefsadw.ui.h:43
+#: ui/prefsadw.ui.h:48
 msgid "Bing JSON data"
 msgstr "Bing JSON data"
 
-#: ui/prefsadw.ui.h:44
+#: ui/prefsadw.ui.h:49
 msgid "About"
 msgstr "O rozšíření"
 
-#: ui/prefsadw.ui.h:45
+#: ui/prefsadw.ui.h:50
 msgid "Bing Wallpaper"
 msgstr "Bing Wallpaper"
 
-#: ui/prefsadw.ui.h:46
+#: ui/prefsadw.ui.h:51
 msgid "New wallpaper images everyday from Bing"
 msgstr "Nové Bing obrázky tapet každý den"
 
-#: ui/prefsadw.ui.h:47
+#: ui/prefsadw.ui.h:52
 msgid "Maintained by Michael Carroll"
 msgstr "Správcem je Michael Carroll"
 
-#: ui/prefsadw.ui.h:48
+#: ui/prefsadw.ui.h:53
 msgid "Version"
 msgstr "Verze"
 
-#: ui/prefsadw.ui.h:49
+#: ui/prefsadw.ui.h:54
 msgid "Release notes"
 msgstr "Poznámky k vydání"
 
-#: ui/prefsadw.ui.h:50
+#: ui/prefsadw.ui.h:55
 msgid "GNOME extensions page"
 msgstr "Stránka rozšíření GNOME"
 
-#: ui/prefsadw.ui.h:51
+#: ui/prefsadw.ui.h:56
 msgid "Source code"
 msgstr "Zdrojový kód"
 
-#: ui/prefsadw.ui.h:52
+#: ui/prefsadw.ui.h:57
 msgid "Report an issue"
 msgstr "Nahlas problém"
 
-#: ui/prefsadw.ui.h:53
+#: ui/prefsadw.ui.h:58
 msgid "Contributors"
 msgstr "Přispěvatelé"
 
-#: ui/prefsadw.ui.h:54
+#: ui/prefsadw.ui.h:59
 msgid "License"
 msgstr "License"
 
-#: ui/prefsadw.ui.h:55 prefs.js:115
+#: ui/prefsadw.ui.h:60 prefs.js:117
 msgid "Change folder"
 msgstr "Změň adresář"
 
-#: ui/prefsadw.ui.h:56
+#: ui/prefsadw.ui.h:61
 msgid "Select new wallpaper download folder"
 msgstr "Zvolte novou složku pro stahování tapet"
 
@@ -266,7 +286,7 @@ msgstr "Vymaž"
 msgid "<image name here>"
 msgstr "<zde jméno obrázku>"
 
-#: ui/carousel4.ui.h:7 extension.js:154
+#: ui/carousel4.ui.h:7 extension.js:160
 msgid "Image shuffle mode"
 msgstr "Mód náhodného přepnutí obrázků"
 
@@ -284,123 +304,117 @@ msgstr "každý den o půlnoci"
 
 #: ui/intervals.utils.js.h:8
 msgid "Sunday at midnight"
-msgstr "každou neděli o půlnoci"
+msgstr "V neděli o půlnoci"
 
 #: ui/intervals.utils.js.h:11
-#, fuzzy
-#| msgid "Random interval"
 msgid "User defined interval"
-msgstr "Náhodný interval"
+msgstr "Uživatelský interval"
 
-#: extension.js:130
+#: extension.js:136
 msgid "<No refresh scheduled>"
 msgstr "<Není plánovaná obnova>"
 
-#: extension.js:131 extension.js:132 extension.js:142 extension.js:144
+#: extension.js:137 extension.js:138 extension.js:148 extension.js:150
 msgid "Awaiting refresh..."
 msgstr "Čekám na obnovu..."
 
-#: extension.js:133
+#: extension.js:139
 msgid "Copy image to clipboard"
 msgstr "Kopíruj obrázek do schránky"
 
-#: extension.js:134
+#: extension.js:140
 msgid "Copy image URL to clipboard"
 msgstr "Kopíruj URL obrázku do schránky"
 
-#: extension.js:135
+#: extension.js:141
 msgid "Open image folder"
 msgstr "Otevři adresář s obrázky"
 
-#: extension.js:136 extension.js:152
+#: extension.js:142 extension.js:158
 msgid "Set background image"
 msgstr "Nastav obrázek pozadí"
 
-#: extension.js:137
+#: extension.js:143
 msgid "Set lock screen image"
 msgstr "Nastav obrázek při uzamčení obrazovky"
 
-#: extension.js:138
+#: extension.js:144
 msgid "Refresh Now"
 msgstr "Obnov teď"
 
-#: extension.js:140
+#: extension.js:146
 msgid "Open in image viewer"
 msgstr "Otevři v prohlížeči"
 
-#: extension.js:141
+#: extension.js:147
 msgid "Open Bing image information page"
 msgstr "Otevři Bing image informační stránku"
 
-#: extension.js:150
+#: extension.js:156
 msgid "Quick settings"
 msgstr "Rychlé nastavení"
 
-#: extension.js:155
+#: extension.js:161
 msgid "Image shuffle only favorites"
 msgstr "Mód náhodného přepnutí jen favoritů"
 
-#: extension.js:156
-msgid "Enable desktop notifications"
-msgstr "Povolit oznámení na ploše"
-
-#: extension.js:157
+#: extension.js:163
 msgid "Show image count"
 msgstr "Zobrazit počet obrázků"
 
-#: extension.js:158
+#: extension.js:164
 msgid "Image shuffle only UHD resolutions"
 msgstr "Přepínej jen obrázky vysokého rozlišení"
 
-#: extension.js:321
+#: extension.js:361
 msgid "Next refresh"
 msgstr "Příští obnova"
 
-#: extension.js:323
+#: extension.js:363
 msgid "Last refresh"
 msgstr "Poslední obnova"
 
-#: extension.js:326
+#: extension.js:366
 msgid "Next shuffle"
 msgstr "Další přepnutí"
 
-#: extension.js:808 extension.js:883
+#: extension.js:856 extension.js:944
 msgid "Bing Wallpaper of the Day for"
 msgstr "Tapeta z Bing pro den"
 
-#: extension.js:921
+#: extension.js:982
 msgid "No wallpaper available"
 msgstr "Žádná tapeta není dostupná"
 
-#: extension.js:922
+#: extension.js:983
 msgid "No picture for today."
 msgstr "Dnes není dostupný žádný obrázek."
 
-#: prefs.js:107
+#: prefs.js:109
 msgid "Open folder"
 msgstr "Otevři složku"
 
-#: prefs.js:130
+#: prefs.js:132
 msgid "Default"
 msgstr "Výchozí"
 
-#: prefs.js:138
+#: prefs.js:140
 msgid "No blur, slight dim"
 msgstr "Lehké"
 
-#: prefs.js:146
+#: prefs.js:148
 msgid "Slight blur & dim"
 msgstr "Mírné"
 
-#: prefs.js:163
+#: prefs.js:165
 msgid "Import"
 msgstr "Import"
 
-#: prefs.js:171
+#: prefs.js:173
 msgid "Export"
 msgstr "Export"
 
-#: prefs.js:238
+#: prefs.js:241
 msgid "Select wallpaper download folder"
 msgstr "Zvolte složku pro stažení tapety"
 
@@ -408,17 +422,20 @@ msgstr "Zvolte složku pro stažení tapety"
 msgid "Error fetching change log: "
 msgstr "Chyba stahování protokolu změn: "
 
-#: utils.js:413 utils.js:416
+#: utils.js:400 utils.js:403
 msgid "minutes"
 msgstr "minut"
 
-#: utils.js:419
+#: utils.js:406
 msgid "days"
 msgstr "dnů"
 
-#: utils.js:422
+#: utils.js:409
 msgid "hours"
 msgstr "hodin"
+
+#~ msgid "Enable desktop notifications"
+#~ msgstr "Povolit oznámení na ploše"
 
 #~ msgid "Bing Wallpaper pictures folder"
 #~ msgstr "Složka tapet z Bing"
@@ -428,9 +445,6 @@ msgstr "hodin"
 
 #~ msgid "Delete previously downloaded wallpapers"
 #~ msgstr "Smaž tapety, které jste dříve stáhli"
-
-#~ msgid "Selected image"
-#~ msgstr "Vybraný obrázek"
 
 #~ msgid "Shuffle mode"
 #~ msgstr "Náhodný mód"
