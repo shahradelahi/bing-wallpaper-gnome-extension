@@ -104,18 +104,12 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
 
         // add wallpaper folder open and change buttons
         const openBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'folder-pictures-symbolic',
-                        label: _('Open folder'),
-                    },),
+            label: _('Open folder'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const changeBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'folder-download-symbolic',
-                        label: _('Change folder'),
-                    },),
+            label: _('Change folder'),
             valign: Gtk.Align.CENTER,
             halign: Gtk.Align.CENTER,
         });
@@ -127,26 +121,17 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
         brightnessAdjustment.set_value(settings.get_int('lockscreen-blur-brightness'));
         
         const defaultBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'emblem-default-symbolic',
-                        label: _('Default'),
-                    },),
+            label: _('Default'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const noBlurBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'emblem-default-symbolic',
-                        label: _('No blur, slight dim'),
-                    },),
+            label: _('No blur, slight dim'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const slightBlurBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'emblem-default-symbolic',
-                        label: _('Slight blur & dim'),
-                    },),
+            label: _('Slight blur & dim'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
@@ -160,18 +145,12 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
 
         // these buttons either export or import saved JSON data
         const buttonImportData = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'document-send-symbolic',
-                        label: _('Import'),
-                    },),
+            label: _('Import'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const buttonExportData = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'document-save-symbolic',
-                        label: _('Export'),
-                    },),
+            label: _('Export'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
