@@ -23,7 +23,7 @@ Bing Wallpaper GNOME extension by: Michael Carroll
     <requires lib="gtk" version="4.0"/>
     <requires lib="libadwaita" version="1.0"/>
     <object class="AdwPreferencesPage" id="settings_page">
-        <property name="icon-name">emblem-photos-symbolic</property>
+        <property name="icon-name">applications-system-symbolic</property>
         <property name="title" translatable="yes">Settings</property>
         <child>
             <object class="AdwPreferencesGroup" id="ui_group">
@@ -110,7 +110,7 @@ Bing Wallpaper GNOME extension by: Michael Carroll
         </child>
     </object>
     <object class="AdwPreferencesPage" id="lockscreen_page">
-        <property name="icon-name">applications-system-symbolic</property>
+        <property name="icon-name">system-lock-screen-symbolic</property>
         <property name="title" translatable="yes">Lock screen</property>
         <child>
             <object class="AdwPreferencesGroup" id="ls_group">
@@ -163,7 +163,7 @@ Bing Wallpaper GNOME extension by: Michael Carroll
         </child>
     </object>
     <object class="AdwPreferencesPage" id="gallery_page">
-        <property name="icon-name">document-open-recent-symbolic</property>
+        <property name="icon-name">emblem-photos-symbolic</property>
         <property name="title" translatable="yes">Gallery</property>
         <child>
             <object class="GtkScrolledWindow" id="carouselViewPort">
