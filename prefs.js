@@ -168,17 +168,18 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
             log("Error creating httpSession: " + e);
         }
         const icon_image = buildable.get_object('icon_image');
+        const app_icon_image = buildable.get_object('app_icon_image');
         
         // check that these are valid (can be edited through dconf-editor)
         Utils.validate_resolution(settings);
-        Utils.validate_icon(settings, this.path, icon_image);
+        Utils.validate_icon(settings, this.path, icon_image, app_icon_image);
         Utils.validate_interval(settings);
 
         // Indicator & notifications
         settings.bind('hide', hideSwitch, 'active', Gio.SettingsBindFlags.DEFAULT);
         settings.bind('notify', notifySwitch, 'active', Gio.SettingsBindFlags.DEFAULT);
         settings.connect('changed::icon-name', () => {
-            Utils.validate_icon(settings, this.path, icon_image);
+            Utils.validate_icon(settings, this.path, icon_image, app_icon_image);
             iconEntry.set_value(1 + Utils.icon_list.indexOf(settings.get_string('icon-name')));
         });
                
