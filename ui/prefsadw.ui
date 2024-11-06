@@ -324,17 +324,11 @@ Bing Wallpaper GNOME extension by: Michael Carroll
         <child>
           <object class="AdwPreferencesGroup" id="change_log_group">
             <child>
-              <object class="AdwActionRow" id="details_row">
+              <object class="AdwActionRow" id="version_row">
                 <property name="title" translatable="yes">Version</property>
-                <child>
-                    <object class="GtkButton" id="version_button">
-                    <property name="halign">center</property>
-                    <property name="can-shrink">True</property>
-                    <style>
-                        <class name="app-version"/>
-                    </style>
-                    </object>
-                </child>
+                <style>
+                    <class name="property"/>
+                </style>
               </object>
             </child>
             <child>

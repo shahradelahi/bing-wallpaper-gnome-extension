@@ -82,7 +82,7 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
         const debug_page = buildable.get_object('debug_page');
         const json_actionrow = buildable.get_object('json_actionrow');
         const about_page = buildable.get_object('about_page');
-        const version_button = buildable.get_object('version_button');
+        const version_row = buildable.get_object('version_row');
         const change_log = buildable.get_object('change_log');
 
         window.add(settings_page);
@@ -158,7 +158,7 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
         json_actionrow.add_suffix(buttonImportData);
         json_actionrow.add_suffix(buttonExportData);
 
-        version_button.set_label(this.metadata.version.toString());      
+        version_row.set_subtitle(this.metadata.version.toString());
        
         try {
             httpSession = new Soup.Session();
