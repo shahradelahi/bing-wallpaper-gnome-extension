@@ -367,6 +367,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="extension_page_linkbutton">
                                     <property name="uri">https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/</property>
+                                    <property name="label">GNOME Extensions</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
@@ -386,6 +388,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="source_code_linkbutton">
                                     <property name="uri">https://github.com/neffo/bing-wallpaper-gnome-extension</property>
+                                    <property name="label">GitHub</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
@@ -405,6 +409,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="bug_report_linkbutton">
                                     <property name="uri">https://github.com/neffo/bing-wallpaper-gnome-extension/issues</property>
+                                    <property name="label">GitHub</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
@@ -424,6 +430,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="contributors_linkbutton">
                                     <property name="uri">https://github.com/neffo/bing-wallpaper-gnome-extension/graphs/contributors</property>
+                                    <property name="label">GitHub</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
