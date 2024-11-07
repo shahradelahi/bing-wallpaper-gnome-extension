@@ -43,11 +43,6 @@ export default class Carousel {
     }
 
     _create_gallery() {
-        Utils.randomIntervals.forEach((x) => {
-            let item = this._create_random_item(x.value, _(x.title));
-            this.flowBox.insert(item, -1);
-        });
-
         this.imageList.forEach((image) => {
             let item = this._create_gallery_item(image);
             this.flowBox.insert(item, -1);
@@ -131,27 +126,6 @@ export default class Carousel {
         });
         
         let item = buildable.get_object('flowBoxChild');
-        return item;
-    }
-
-    _create_random_item(interval, title) {
-        let buildable = new Gtk.Builder();
-
-        // grab appropriate object from UI file
-        buildable.add_objects_from_file(this.extensionPath + '/ui/carousel4.ui', ["flowBoxRandom"]);
-
-        let randomLabel = buildable.get_object('randomLabel');
-        randomLabel.set_text(title);
-        let filename = 'random';
-        let applyButton = buildable.get_object('randomButton');
-
-        applyButton.connect('clicked', (widget) => {
-            this.settings.set_string('random-interval-mode', interval);
-            this.settings.set_boolean('random-mode-enabled', true);
-            this.log('gallery selected random with interval '+interval+' ('+title+')');
-        });
-
-        let item = buildable.get_object('flowBoxRandom');
         return item;
     }
 
