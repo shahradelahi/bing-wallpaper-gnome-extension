@@ -234,7 +234,7 @@ msgstr ""
 msgid "License"
 msgstr ""
 
-#: ui/prefsadw.ui.h:60 prefs.js:117
+#: ui/prefsadw.ui.h:60 prefs.js:112
 msgid "Change folder"
 msgstr ""
 
@@ -346,70 +346,70 @@ msgstr ""
 msgid "Image shuffle only UHD resolutions"
 msgstr ""
 
-#: extension.js:361
+#: extension.js:360
 msgid "Next refresh"
 msgstr ""
 
-#: extension.js:363
+#: extension.js:362
 msgid "Last refresh"
 msgstr ""
 
-#: extension.js:366
+#: extension.js:365
 msgid "Next shuffle"
 msgstr ""
 
-#: extension.js:856 extension.js:944
+#: extension.js:855 extension.js:943
 msgid "Bing Wallpaper of the Day for"
 msgstr ""
 
-#: extension.js:982
+#: extension.js:981
 msgid "No wallpaper available"
 msgstr ""
 
-#: extension.js:983
+#: extension.js:982
 msgid "No picture for today."
 msgstr ""
 
-#: prefs.js:109
+#: prefs.js:107
 msgid "Open folder"
 msgstr ""
 
-#: prefs.js:132
+#: prefs.js:124
 msgid "Default"
 msgstr ""
 
-#: prefs.js:140
+#: prefs.js:129
 msgid "No blur, slight dim"
 msgstr ""
 
-#: prefs.js:148
+#: prefs.js:134
 msgid "Slight blur & dim"
 msgstr ""
 
-#: prefs.js:165
+#: prefs.js:148
 msgid "Import"
 msgstr ""
 
-#: prefs.js:173
+#: prefs.js:153
 msgid "Export"
 msgstr ""
 
-#: prefs.js:241
+#: prefs.js:221
 msgid "Select wallpaper download folder"
 msgstr ""
 
-#: utils.js:134
+#: utils.js:142
 msgid "Error fetching change log: "
 msgstr ""
 
-#: utils.js:400 utils.js:403
+#: utils.js:408 utils.js:411
 msgid "minutes"
 msgstr ""
 
-#: utils.js:406
+#: utils.js:414
 msgid "days"
 msgstr ""
 
-#: utils.js:409
+#: utils.js:417
 msgid "hours"
 msgstr ""
