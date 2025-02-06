@@ -574,7 +574,7 @@ class BingWallpaperIndicator extends Button {
         );
 
         if (!success) {
-            throw Error("error creating Clutter.Image()");
+            throw Error("error creating St.ImageContent()");
         }
 
         this.thumbnailItem.hexpand = false;
