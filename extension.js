@@ -565,6 +565,7 @@ class BingWallpaperIndicator extends Button {
 
         const image = new St.ImageContent();
         const success = image.set_data(
+            Clutter.get_default_backend().get_cogl_context(),
             pixbuf.get_pixels(),
             pixbuf.get_has_alpha() ? Cogl.PixelFormat.RGBA_8888 : Cogl.PixelFormat.RGB_888,
             width,
