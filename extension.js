@@ -927,7 +927,7 @@ class BingWallpaperIndicator extends Button {
 
                 if (image)
                     this.imageIndex = Utils.imageIndex(imageList, image.urlbase);
-                BingLog('_selectImage: ' + this.selected_image + ' = ' + (image && image.urlbase) ? image.urlbase : 'not found');
+                BingLog('_selectImage: ' + this.selected_image + ' = ' + (image && image.urlbase ? image.urlbase : 'not found'));
             }
         }
 
