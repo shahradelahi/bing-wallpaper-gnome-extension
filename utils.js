@@ -58,7 +58,12 @@ export var randomIntervals = [ {value: 'hourly', title: ('on the hour')},
 export var BingImageURL = 'https://www.bing.com/HPImageArchive.aspx';
 export var BingParams = { format: 'js', idx: '0' , n: '8' , mbl: '1' , mkt: '' } ;
 
-export function validate_icon(settings, extension_path, icon_image = null) {
+export function validate_icon(
+    settings,
+    extension_path,
+    icon_image = null,
+    app_icon_image = null
+) {
     BingLog('validate_icon()');
     let icon_name = settings.get_string('icon-name');
     if (icon_name == '' || icon_list.indexOf(icon_name) == -1) {
@@ -66,10 +71,11 @@ export function validate_icon(settings, extension_path, icon_image = null) {
         icon_name = settings.get_string('icon-name');
     }
     // if called from prefs
-    if (icon_image) { 
+    if (icon_image && app_icon_image) {
         BingLog('set icon to: ' + extension_path + '/icons/' + icon_name + '.svg');
         let pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(extension_path + '/icons/' + icon_name + '.svg', 64, 64);
         icon_image.set_from_pixbuf(pixbuf);
+        app_icon_image.set_from_pixbuf(pixbuf);
     }
 }
 
