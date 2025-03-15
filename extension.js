@@ -563,17 +563,19 @@ class BingWallpaperIndicator extends Button {
             return;
         }
 
-        const image = new Clutter.Image();
-        const success = image.set_data(
+        const [version] = Config.PACKAGE_VERSION.split('.').map(s => Number(s));
+        const image = new St.ImageContent();
+        const success = image.set_data.apply(image, [
+            ...version >= 48 ? [Clutter.get_default_backend().get_cogl_context()] : [],
             pixbuf.get_pixels(),
             pixbuf.get_has_alpha() ? Cogl.PixelFormat.RGBA_8888 : Cogl.PixelFormat.RGB_888,
             width,
             height,
-            pixbuf.get_rowstride()
-        );
+            pixbuf.get_rowstride(),
+        ]);
 
         if (!success) {
-            throw Error("error creating Clutter.Image()");
+            throw Error("error creating St.ImageContent()");
         }
 
         this.thumbnailItem.hexpand = false;
