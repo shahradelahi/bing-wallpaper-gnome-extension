@@ -21,7 +21,8 @@ import {Button} from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import * as Config from 'resource:///org/gnome/shell/misc/config.js';
 
-import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Utils from './utils.js';
 import Blur from './blur.js';
 import Thumbnail from './thumbnail.js';
@@ -347,6 +348,7 @@ class BingWallpaperIndicator extends Button {
     }
 
     _openMenu() {
+        BingLog("_openMenu() called");
         // Grey out menu items if an update is pending
         this.refreshItem.setSensitive(!this._updatePending);
         this.clipboardImageItem.setSensitive(!this._updatePending && this.imageURL != "");
@@ -358,7 +360,7 @@ class BingWallpaperIndicator extends Button {
         let maxlongdate = Utils.getMaxLongDate(this._settings);
         this.refreshduetext = 
             _("Next refresh") + ": " + (this.refreshdue ? this.refreshdue.format("%Y-%m-%d %X") : '-') + 
-            " (" + (this.refreshdue?Utils.friendly_time_diff(this.refreshdue):"-" + ")\n") + 
+            " (" + (this.refreshdue?Utils.friendly_time_diff(this.refreshdue):"-") + ")\n" + 
             _("Last refresh") + ": " + (maxlongdate? this._localeDate(maxlongdate, true) : '-');
         // also show when shuffle is next due
         if (this._settings.get_boolean('random-mode-enabled')) {
