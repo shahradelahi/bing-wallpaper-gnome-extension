@@ -348,7 +348,6 @@ class BingWallpaperIndicator extends Button {
     }
 
     _openMenu() {
-        BingLog("_openMenu() called");
         // Grey out menu items if an update is pending
         this.refreshItem.setSensitive(!this._updatePending);
         this.clipboardImageItem.setSensitive(!this._updatePending && this.imageURL != "");

@@ -346,27 +346,27 @@ msgstr ""
 msgid "Image shuffle only UHD resolutions"
 msgstr ""
 
-#: extension.js:362
+#: extension.js:361
 msgid "Next refresh"
 msgstr ""
 
-#: extension.js:364
+#: extension.js:363
 msgid "Last refresh"
 msgstr ""
 
-#: extension.js:367
+#: extension.js:366
 msgid "Next shuffle"
 msgstr ""
 
-#: extension.js:860 extension.js:948
+#: extension.js:859 extension.js:947
 msgid "Bing Wallpaper of the Day for"
 msgstr ""
 
-#: extension.js:986
+#: extension.js:985
 msgid "No wallpaper available"
 msgstr ""
 
-#: extension.js:987
+#: extension.js:986
 msgid "No picture for today."
 msgstr ""
 
