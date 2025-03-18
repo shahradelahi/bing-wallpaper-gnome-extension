@@ -1,4 +1,4 @@
-#: ui/prefsadw.ui.h:1 extension.js:145
+#: ui/prefsadw.ui.h:1 extension.js:146
 msgid "Settings"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Advanced options"
 msgstr ""
 
-#: ui/prefsadw.ui.h:34 extension.js:159
+#: ui/prefsadw.ui.h:34 extension.js:160
 msgid "Always show new images"
 msgstr ""
 
@@ -234,7 +234,7 @@ msgstr ""
 msgid "License"
 msgstr ""
 
-#: ui/prefsadw.ui.h:60 prefs.js:117
+#: ui/prefsadw.ui.h:60 prefs.js:112
 msgid "Change folder"
 msgstr ""
 
@@ -266,7 +266,7 @@ msgstr ""
 msgid "<image name here>"
 msgstr ""
 
-#: ui/carousel4.ui.h:7 extension.js:160
+#: ui/carousel4.ui.h:7 extension.js:161
 msgid "Image shuffle mode"
 msgstr ""
 
@@ -290,59 +290,59 @@ msgstr ""
 msgid "User defined interval"
 msgstr ""
 
-#: extension.js:136
+#: extension.js:137
 msgid "<No refresh scheduled>"
 msgstr ""
 
-#: extension.js:137 extension.js:138 extension.js:148 extension.js:150
+#: extension.js:138 extension.js:139 extension.js:149 extension.js:151
 msgid "Awaiting refresh..."
 msgstr ""
 
-#: extension.js:139
+#: extension.js:140
 msgid "Copy image to clipboard"
 msgstr ""
 
-#: extension.js:140
+#: extension.js:141
 msgid "Copy image URL to clipboard"
 msgstr ""
 
-#: extension.js:141
+#: extension.js:142
 msgid "Open image folder"
 msgstr ""
 
-#: extension.js:142 extension.js:158
+#: extension.js:143 extension.js:159
 msgid "Set background image"
 msgstr ""
 
-#: extension.js:143
+#: extension.js:144
 msgid "Set lock screen image"
 msgstr ""
 
-#: extension.js:144
+#: extension.js:145
 msgid "Refresh Now"
 msgstr ""
 
-#: extension.js:146
+#: extension.js:147
 msgid "Open in image viewer"
 msgstr ""
 
-#: extension.js:147
+#: extension.js:148
 msgid "Open Bing image information page"
 msgstr ""
 
-#: extension.js:156
+#: extension.js:157
 msgid "Quick settings"
 msgstr ""
 
-#: extension.js:161
+#: extension.js:162
 msgid "Image shuffle only favorites"
 msgstr ""
 
-#: extension.js:163
+#: extension.js:164
 msgid "Show image count"
 msgstr ""
 
-#: extension.js:164
+#: extension.js:165
 msgid "Image shuffle only UHD resolutions"
 msgstr ""
 
@@ -358,58 +358,58 @@ msgstr ""
 msgid "Next shuffle"
 msgstr ""
 
-#: extension.js:856 extension.js:944
+#: extension.js:859 extension.js:947
 msgid "Bing Wallpaper of the Day for"
 msgstr ""
 
-#: extension.js:982
+#: extension.js:985
 msgid "No wallpaper available"
 msgstr ""
 
-#: extension.js:983
+#: extension.js:986
 msgid "No picture for today."
 msgstr ""
 
-#: prefs.js:109
+#: prefs.js:107
 msgid "Open folder"
 msgstr ""
 
-#: prefs.js:132
+#: prefs.js:124
 msgid "Default"
 msgstr ""
 
-#: prefs.js:140
+#: prefs.js:129
 msgid "No blur, slight dim"
 msgstr ""
 
-#: prefs.js:148
+#: prefs.js:134
 msgid "Slight blur & dim"
 msgstr ""
 
-#: prefs.js:165
+#: prefs.js:148
 msgid "Import"
 msgstr ""
 
-#: prefs.js:173
+#: prefs.js:153
 msgid "Export"
 msgstr ""
 
-#: prefs.js:241
+#: prefs.js:221
 msgid "Select wallpaper download folder"
 msgstr ""
 
-#: utils.js:134
+#: utils.js:142
 msgid "Error fetching change log: "
 msgstr ""
 
-#: utils.js:400 utils.js:403
+#: utils.js:408 utils.js:411
 msgid "minutes"
 msgstr ""
 
-#: utils.js:406
+#: utils.js:414
 msgid "days"
 msgstr ""
 
-#: utils.js:409
+#: utils.js:417
 msgid "hours"
 msgstr ""

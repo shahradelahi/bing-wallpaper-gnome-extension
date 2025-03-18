@@ -1,291 +1,440 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Jon Harald Søby <jhsoby@gmail.com>, 2021.
+# John Erling Blad <jeblad@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-09 13:10+1000\n"
-"PO-Revision-Date: 2021-05-09 14:11+1000\n"
-"Last-Translator: Jon Harald Søby <jhsoby@gmail.com>\n"
+"PO-Revision-Date: 2024-12-07 23:40+0100\n"
+"Last-Translator: John Erling Blad <jeblad@gmail.com>\n"
 "Language-Team: \n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Gtranslator 47.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: Settings.ui.h:1 Settings4.ui.h:2
-msgid "Hide the indicator"
-msgstr "Skjul indikatoren"
-
-#: Settings.ui.h:2 Settings4.ui.h:3
-#, fuzzy
-msgid "Indicator icon"
-msgstr "Indikatoren"
-
-#: Settings.ui.h:3 Settings4.ui.h:4
-msgid "Enable desktop notifications"
-msgstr ""
-
-#: Settings.ui.h:4 Settings4.ui.h:5 extension.js:129
-msgid "Set background image"
-msgstr "Sett bakgrunnsbilde"
-
-#: Settings.ui.h:5 Settings4.ui.h:6 extension.js:130
-msgid "Set lock screen image"
-msgstr "Sett låseskjermbilde"
-
-#: Settings.ui.h:6 Settings4.ui.h:7
-msgid "Download folder"
-msgstr "Nedlastingsmappe"
-
-#: Settings.ui.h:7 Settings4.ui.h:1
-msgid "Bing Wallpaper pictures folder"
-msgstr "Mappe for Bing-bakgrunnsbilder"
-
-#: Settings.ui.h:8 Settings4.ui.h:9
-msgid "Delete previously downloaded wallpapers"
-msgstr "Slett tidligere nedlastede bakgrunner"
-
-#: Settings.ui.h:9 Settings4.ui.h:10
-msgid "Days to store wallpapers before deleting"
-msgstr "Antall dager bakgrunnene skal lagres før de slettes"
-
-#: Settings.ui.h:10 Settings4.ui.h:11
-msgid "Bing locale"
-msgstr "Bing-lokale"
-
-#: Settings.ui.h:11 Settings4.ui.h:12
-msgid "Default is English - United States"
-msgstr "Standard er engelsk (USA)"
-
-#: Settings.ui.h:12 Settings4.ui.h:14
-msgid "Screen resolution"
-msgstr "Skjermoppløsning"
-
-#: Settings.ui.h:13 Settings4.ui.h:15
-msgid "Override automatic resolution selection"
-msgstr "Overstyr automatisk valg av skjermoppløsning"
-
-#: Settings.ui.h:14 Settings4.ui.h:13
-#, fuzzy
-msgid "Selected image"
-msgstr "Bilde"
-
-#: Settings.ui.h:15 Settings4.ui.h:16 extension.js:132
+#: ui/prefsadw.ui.h:1 extension.js:145
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: Settings.ui.h:16 Settings4.ui.h:17
-msgid "Use custom blur and brightness"
-msgstr ""
+#: ui/prefsadw.ui.h:2
+msgid "Indicator"
+msgstr "Indikatorikon"
 
-#: Settings.ui.h:17 Settings4.ui.h:18
-msgid "Override GDM3 lockscreen effects"
-msgstr ""
+#: ui/prefsadw.ui.h:3
+msgid "Hide Indicator"
+msgstr "Skjul indikatoren"
 
-#: Settings.ui.h:18 Settings4.ui.h:19
-msgid "Blur can improve readability of login prompt"
-msgstr ""
+#: ui/prefsadw.ui.h:4
+msgid "Whether to hide the panel indicator"
+msgstr "Om panelindikatoren skal skjules"
 
-#: Settings.ui.h:19 Settings4.ui.h:20
-msgid "Background blur intensity"
-msgstr ""
+#: ui/prefsadw.ui.h:5
+msgid "Desktop notifications"
+msgstr "Skrivebordsvarsler"
 
-#: Settings.ui.h:20 Settings4.ui.h:21
-msgid "Can improve contrast of login prompt"
-msgstr ""
+#: ui/prefsadw.ui.h:6
+msgid "Enable notifications on new images"
+msgstr "Aktiver varsler på nye bilder"
 
-#: Settings.ui.h:21 Settings4.ui.h:22
-msgid "Background brightness"
-msgstr ""
+#: ui/prefsadw.ui.h:7
+msgid "Indicator icon"
+msgstr "Indikatorikon"
 
-#: Settings.ui.h:22 Settings4.ui.h:23
+#: ui/prefsadw.ui.h:8
+msgid "Select from alternate tray icons"
+msgstr "Velg fra alternative ikoner"
+
+#: ui/prefsadw.ui.h:9
+msgid "Download folder"
+msgstr "Nedlastingsmappe"
+
+#: ui/prefsadw.ui.h:10
+msgid "Open or change wallpaper downloads folder"
+msgstr "Åpne eller endre mappen for nedlasting av bakgrunnsbilder"
+
+#: ui/prefsadw.ui.h:11
+msgid "Wallpaper"
+msgstr "Tapet"
+
+#: ui/prefsadw.ui.h:12
+msgid "Set wallpaper"
+msgstr "Sett tapet"
+
+#: ui/prefsadw.ui.h:13
+msgid "Whether to set wallpaper automatically"
+msgstr "Om du vil sette tapet automatisk"
+
+#: ui/prefsadw.ui.h:14
+msgid "Shuffle wallpaper"
+msgstr "Stokk tapet"
+
+#: ui/prefsadw.ui.h:15
+msgid "Randomly select wallpaper from collection"
+msgstr "Velg tilfeldig tapet fra samlingen"
+
+#: ui/prefsadw.ui.h:16
+msgid "Shuffle interval"
+msgstr "Stokkeintervall"
+
+#: ui/prefsadw.ui.h:17
+msgid "How frequently to shuffle wallpapers"
+msgstr "Hvor ofte tapet stokkes"
+
+#: ui/prefsadw.ui.h:18
+msgid "Downloads"
+msgstr "Nedlastinger"
+
+#: ui/prefsadw.ui.h:19
+msgid "Lock screen"
+msgstr "Låseskjerm"
+
+#: ui/prefsadw.ui.h:20
+msgid "Lockscreen blur"
+msgstr "Låseskjermens uskarphet"
+
+#: ui/prefsadw.ui.h:21
+msgid "Dynamic lockscreen blur"
+msgstr "Dynamisk uskarphet på låseskjermen"
+
+#: ui/prefsadw.ui.h:22
+msgid "Whether to enable dynamic blur mode on lock screen"
+msgstr "Om du vil aktivere dynamisk uskarphet-modus på låseskjermen"
+
+#: ui/prefsadw.ui.h:23
+msgid "Blur strength"
+msgstr "Styrke på uskarpheten"
+
+#: ui/prefsadw.ui.h:24
+msgid "Blur strength when login prompt is not visible"
+msgstr "Styrke på uskarpheten når påloggingsforespørsel ikke er synlig"
+
+#: ui/prefsadw.ui.h:25
+msgid "Wallpaper brightness"
+msgstr "Tapetets lysstyrke"
+
+#: ui/prefsadw.ui.h:26
+msgid "Dim wallpaper when login prompt is not visible"
+msgstr "Demp tapetet når påloggforespørselen ikke er synlig"
+
+#: ui/prefsadw.ui.h:27
 msgid "Presets"
+msgstr "Forhåndsinnstillinger"
+
+#: ui/prefsadw.ui.h:28
+msgid "Gallery"
+msgstr "Galleri"
+
+#: ui/prefsadw.ui.h:29
+msgid "Debug"
+msgstr "Feilsøk"
+
+#: ui/prefsadw.ui.h:30
+msgid "Debug options"
+msgstr "Alternativer for feilsøk"
+
+#: ui/prefsadw.ui.h:31
+msgid "Debug logging"
+msgstr "Logging av feilsøk"
+
+#: ui/prefsadw.ui.h:32
+msgid "Enable logging to system journal"
+msgstr "Aktiver logging til systemjournal"
+
+#: ui/prefsadw.ui.h:33
+msgid "Advanced options"
+msgstr "Avanserte alternativer"
+
+#: ui/prefsadw.ui.h:34 extension.js:159
+msgid "Always show new images"
+msgstr "Alltid vis nye bilder"
+
+#: ui/prefsadw.ui.h:35
+msgid "Switch to new images when available (unless on random mode)"
 msgstr ""
+"Bytt til nye bilder når de er tilgjengelige (med mindre i tilfeldig modus)"
 
-#: Settings.ui.h:23 Settings4.ui.h:24
-msgid "Commonly used presets"
-msgstr ""
+#: ui/prefsadw.ui.h:36
+msgid "Purge on trash"
+msgstr "Slett ved kast"
 
-#: Settings.ui.h:24 Settings4.ui.h:25
-msgid "No blur, slight dim"
-msgstr ""
+#: ui/prefsadw.ui.h:37
+msgid "Trashing an image will remove it from database and disk"
+msgstr "Hvis du sletter et bilde, fjernes det fra databasen og disken"
 
-#: Settings.ui.h:25 Settings4.ui.h:26
-msgid "GNOME default"
-msgstr ""
+#: ui/prefsadw.ui.h:38
+msgid "Screen resolution"
+msgstr "Skjermoppløsning"
 
-#: Settings.ui.h:26 Settings4.ui.h:27
-msgid "Slight blur, slight dim"
-msgstr ""
+#: ui/prefsadw.ui.h:39
+msgid "Override automatic resolution selection"
+msgstr "Overstyr automatisk valg av skjermoppløsning"
 
-#: Settings.ui.h:27 Settings4.ui.h:28
-msgid "Lock Screen"
-msgstr ""
+#: ui/prefsadw.ui.h:40
+msgid "Random interval"
+msgstr "Tilfeldig intervall"
 
-#: Settings.ui.h:28 Settings4.ui.h:29
-msgid "New wallpaper images everyday from Bing"
-msgstr ""
+#: ui/prefsadw.ui.h:41
+msgid "Custom shuffle interval when enabled"
+msgstr "Eget stokke-intervall når aktivert"
 
-#: Settings.ui.h:29 Settings4.ui.h:30
-msgid "Gnome shell extension version "
-msgstr "Gnome shell-utvidelsesversjon "
+#: ui/prefsadw.ui.h:42
+msgid "Delete older images"
+msgstr "Slett eldre bilde"
 
-#: Settings.ui.h:30 Settings4.ui.h:31
-msgid "https://github.com/neffo/bing-wallpaper-gnome-extension"
-msgstr "https://github.com/neffo/bing-wallpaper-gnome-extension"
+#: ui/prefsadw.ui.h:43
+msgid "Automatically delete older images (excludes favourites)"
+msgstr "Slett automatisk eldre bilder (ekskluderer favoritter)"
 
-#: Settings.ui.h:31 Settings4.ui.h:32
-msgid "Maintained by Michael Carroll"
-msgstr "Vedlikeholdes av Michael Carroll"
+#: ui/prefsadw.ui.h:44
+msgid "Number of days to keep images"
+msgstr "Antall dager bilder beholdes"
 
-#: Settings.ui.h:32 Settings4.ui.h:33
-msgid ""
-"Show your support to the author on <a href=\"https://flattr.com/@neffo"
-"\">Flattr</a> or <a href=\"https://github.com/sponsors/neffo\">Github "
-"Sponsors</a>."
-msgstr ""
+#: ui/prefsadw.ui.h:45
+msgid "Keep images for this number of days (favourites are kept forever)"
+msgstr "Behold bilder i dette antallet dager (favoritter beholdes for alltid)"
 
-#: Settings.ui.h:33 Settings4.ui.h:34
-msgid "Changes since last version"
-msgstr ""
+#: ui/prefsadw.ui.h:46
+msgid "Always export Bing data"
+msgstr "Eksporter alltid Bing-data"
 
-#: Settings.ui.h:34 Settings4.ui.h:35
-msgid "Based on NASA APOD Gnome shell extension by Elia Argentieri"
-msgstr "Basert på Gnome-utvidelsen NASA APOD av Elia Argentieri"
+#: ui/prefsadw.ui.h:47
+msgid "Export Bing JSON when image data changes"
+msgstr "Eksporter Bing JSON når bildedata endres"
 
-#: Settings.ui.h:35 Settings4.ui.h:36
-#, fuzzy
-#| msgid ""
-#| "<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
-#| "See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
-#| "\">GNU General Public License, version 3 or later</a> for details.</span>"
-msgid ""
-"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
-"See the <a href=\"https://www.gnu.org/licenses/gpl-3.0.html\">GNU General "
-"Public License, version 3 or later</a> for details.</span>"
-msgstr ""
-"<span size=\"small\">Dette programmet kommer HELT UTEN GARANTI.\n"
-"Se <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU "
-"General Public License, versjon 3 eller senere</a> for detaljer.</span>"
+#: ui/prefsadw.ui.h:48
+msgid "Bing JSON data"
+msgstr "Bing JSON-data"
 
-#: Settings.ui.h:37 Settings4.ui.h:38
+#: ui/prefsadw.ui.h:49
 msgid "About"
 msgstr "Om"
 
-#: Settings4.ui.h:8
-#, fuzzy
-msgid "Open folder"
-msgstr "Mappe for bakgrunnsbilder"
+#: ui/prefsadw.ui.h:50
+msgid "Bing Wallpaper"
+msgstr "Bing-tapet"
 
-#: extension.js:117
+#: ui/prefsadw.ui.h:51
+msgid "New wallpaper images everyday from Bing"
+msgstr "Nye tapet-bilder hver dag fra Bing"
+
+#: ui/prefsadw.ui.h:52
+msgid "Maintained by Michael Carroll"
+msgstr "Vedlikeholdes av Michael Carroll"
+
+#: ui/prefsadw.ui.h:53
+msgid "Version"
+msgstr "Versjon"
+
+#: ui/prefsadw.ui.h:54
+msgid "Release notes"
+msgstr "Utgivelsesnotater"
+
+#: ui/prefsadw.ui.h:55
+msgid "GNOME extensions page"
+msgstr "Side for GNOME-utvidelser"
+
+#: ui/prefsadw.ui.h:56
+msgid "Source code"
+msgstr "Kildekode"
+
+#: ui/prefsadw.ui.h:57
+msgid "Report an issue"
+msgstr "Rapporter et problem"
+
+#: ui/prefsadw.ui.h:58
+msgid "Contributors"
+msgstr "Bidragsytere"
+
+#: ui/prefsadw.ui.h:59
+msgid "License"
+msgstr "Lisens"
+
+#: ui/prefsadw.ui.h:60 prefs.js:117
+msgid "Change folder"
+msgstr "Endre mappe"
+
+#: ui/prefsadw.ui.h:61
+msgid "Select new wallpaper download folder"
+msgstr "Velg ny mappe for nedlasting av tapet"
+
+#: ui/carousel4.ui.h:1
+msgid "Favorite"
+msgstr "Favoritt"
+
+#: ui/carousel4.ui.h:2
+msgid "Apply"
+msgstr "Utfør"
+
+#: ui/carousel4.ui.h:3
+msgid "View"
+msgstr "Vis"
+
+#: ui/carousel4.ui.h:4
+msgid "Info"
+msgstr "Info"
+
+#: ui/carousel4.ui.h:5
+msgid "Delete"
+msgstr "Slett"
+
+#: ui/carousel4.ui.h:6
+msgid "<image name here>"
+msgstr "<billednavn her>"
+
+#: ui/carousel4.ui.h:7 extension.js:160
+msgid "Image shuffle mode"
+msgstr "Stokket bildemodus"
+
+#: ui/carousel4.ui.h:8
+msgid "Load image gallery"
+msgstr "Last inn bildegalleri"
+
+# Seems like a patchwork message.
+#: ui/intervals.utils.js.h:2
+msgid "on the hour"
+msgstr "på timen"
+
+# Seems like a patchwork message.
+#: ui/intervals.utils.js.h:5
+msgid "every day at midnight"
+msgstr "hver dag ved midnatt"
+
+#: ui/intervals.utils.js.h:8
+msgid "Sunday at midnight"
+msgstr "Søndag ved midnatt"
+
+#: ui/intervals.utils.js.h:11
+msgid "User defined interval"
+msgstr "Brukerdefinert intervall"
+
+#: extension.js:136
 msgid "<No refresh scheduled>"
 msgstr "<Ingen oppdatering planlagt>"
 
-#: extension.js:119 extension.js:121 extension.js:123
+#: extension.js:137 extension.js:138 extension.js:148 extension.js:150
 msgid "Awaiting refresh..."
 msgstr "Venter på oppdatering …"
 
-#: extension.js:126
-#, fuzzy
+#: extension.js:139
 msgid "Copy image to clipboard"
-msgstr "Kopier bildets til utklippstavlen"
+msgstr "Kopier bildet til utklippstavlen"
 
-#: extension.js:127
+#: extension.js:140
 msgid "Copy image URL to clipboard"
 msgstr "Kopier bildets URL til utklippstavlen"
 
-#: extension.js:128
-#, fuzzy
+#: extension.js:141
 msgid "Open image folder"
-msgstr "Mappe for bakgrunnsbilder"
+msgstr "Åpne billedmappe"
 
-#: extension.js:131
+#: extension.js:142 extension.js:158
+msgid "Set background image"
+msgstr "Sett bakgrunnsbilde"
+
+#: extension.js:143
+msgid "Set lock screen image"
+msgstr "Sett låseskjermbilde"
+
+#: extension.js:144
 msgid "Refresh Now"
 msgstr "Oppdater nå"
 
-#: extension.js:137
-msgid "Thumbnail disabled on Wayland"
-msgstr ""
+#: extension.js:146
+msgid "Open in image viewer"
+msgstr "Åpne i bildeviser"
 
-#: extension.js:203
+#: extension.js:147
+msgid "Open Bing image information page"
+msgstr "Åpne Bing sin informasjonsside om bildet"
+
+#: extension.js:156
+msgid "Quick settings"
+msgstr "Raske innstillinger"
+
+#: extension.js:161
+msgid "Image shuffle only favorites"
+msgstr "Stokk bare favoritt-bilder"
+
+#: extension.js:163
+msgid "Show image count"
+msgstr "Vis antall bilder"
+
+#: extension.js:164
+msgid "Image shuffle only UHD resolutions"
+msgstr "Stokk bare bilder med UHD-oppløsning"
+
+#: extension.js:361
 msgid "Next refresh"
 msgstr "Neste oppdatering"
 
-#: extension.js:490 extension.js:527
+#: extension.js:363
+msgid "Last refresh"
+msgstr "Siste oppdatering"
+
+#: extension.js:366
+msgid "Next shuffle"
+msgstr "Neste stokking"
+
+# Patchwork message. Such should not be used.
+#: extension.js:856 extension.js:944
 msgid "Bing Wallpaper of the Day for"
-msgstr "Dagens Bing-bakgrunn for"
+msgstr "Dagens Bing-tapet for"
 
-#: extension.js:495
-msgid "Set as wallpaper"
-msgstr "Sett bakgrunn"
-
-#: extension.js:498
-msgid "More info on Bing.com"
-msgstr ""
-
-#: extension.js:553
+#: extension.js:982
 msgid "No wallpaper available"
-msgstr "Ingen bakgrunn tilgjengelig"
+msgstr "Ingen bakgrunnsbilde tilgjengelig"
 
-#: extension.js:554
+#: extension.js:983
 msgid "No picture for today."
 msgstr "Ikke noe bilde for i dag."
 
+#: prefs.js:109
+msgid "Open folder"
+msgstr "Åpne mappe"
+
+#: prefs.js:132
+msgid "Default"
+msgstr "Standard"
+
+#: prefs.js:140
+msgid "No blur, slight dim"
+msgstr "Ikke uskarp, litt mørk"
+
+#: prefs.js:148
+msgid "Slight blur & dim"
+msgstr "Litt uskarp, litt mørk"
+
+#: prefs.js:165
+msgid "Import"
+msgstr "Import"
+
 #: prefs.js:173
-#, fuzzy
-msgid "Most recent image"
-msgstr "Bilde for i dag"
+msgid "Export"
+msgstr "Eksport"
 
-#: prefs.js:174
-#, fuzzy
-msgid "Random image"
-msgstr "Random bilde"
+#: prefs.js:241
+msgid "Select wallpaper download folder"
+msgstr "Velg nedlastingsmappe for tapet"
 
-#: prefs.js:190 prefs.js:206
-msgid "Disabled on current GNOME version"
-msgstr ""
+#: utils.js:134
+msgid "Error fetching change log: "
+msgstr "Feil ved henting av endringslogg:"
 
-#: utils.js:139
-msgid "Fetching data..."
-msgstr "Henter data …"
-
-#: utils.js:150
-msgid "Market not available in your region"
-msgstr "Markedet er ikke tilgjengelig i din region"
-
-#: utils.js:154
-msgid "A network error occured"
-msgstr "En nettverksfeil oppsto"
-
-#: utils.js:159
-msgid "Too many requests in 5 seconds"
-msgstr ""
-
-#: utils.js:186
-msgid "No change log found for this release"
-msgstr ""
-
-#: utils.js:366 utils.js:369
+#: utils.js:400 utils.js:403
 msgid "minutes"
 msgstr "minutter"
 
-#: utils.js:372
+#: utils.js:406
 msgid "days"
 msgstr "dager"
 
-#: utils.js:375
+#: utils.js:409
 msgid "hours"
 msgstr "timer"
-
-#~ msgid ""
-#~ "Changes your wallpaper daily to the Bing picture of the day for your "
-#~ "region. Displays the picture description and copyright information."
-#~ msgstr ""
-#~ "Endrer bakgrunnsbildet daglig til dagens Bing-bilde for din region. Viser "
-#~ "bildebeskrivelse og opphavsrettsinformasjon."

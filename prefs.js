@@ -1,5 +1,5 @@
 // Bing Wallpaper GNOME extension
-// Copyright (C) 2017-2023 Michael Carroll
+// Copyright (C) 2017-2025 Michael Carroll
 // This extension is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -44,7 +44,7 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
         let carousel = null;
         let httpSession = null;
 
-        let log = (msg) => { // avoids need for globals
+        let BingLog = (msg) => { // avoids need for globals
             if (settings.get_boolean('debug-logging'))
                 console.log("BingWallpaper extension: " + msg); // disable to keep the noise down in journal
         }
@@ -82,7 +82,7 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
         const debug_page = buildable.get_object('debug_page');
         const json_actionrow = buildable.get_object('json_actionrow');
         const about_page = buildable.get_object('about_page');
-        const version_button = buildable.get_object('version_button');
+        const version_row = buildable.get_object('version_row');
         const change_log = buildable.get_object('change_log');
 
         window.add(settings_page);
@@ -104,18 +104,12 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
 
         // add wallpaper folder open and change buttons
         const openBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'folder-pictures-symbolic',
-                        label: _('Open folder'),
-                    },),
+            label: _('Open folder'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const changeBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'folder-download-symbolic',
-                        label: _('Change folder'),
-                    },),
+            label: _('Change folder'),
             valign: Gtk.Align.CENTER,
             halign: Gtk.Align.CENTER,
         });
@@ -127,26 +121,17 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
         brightnessAdjustment.set_value(settings.get_int('lockscreen-blur-brightness'));
         
         const defaultBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'emblem-default-symbolic',
-                        label: _('Default'),
-                    },),
+            label: _('Default'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const noBlurBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'emblem-default-symbolic',
-                        label: _('No blur, slight dim'),
-                    },),
+            label: _('No blur, slight dim'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const slightBlurBtn = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'emblem-default-symbolic',
-                        label: _('Slight blur & dim'),
-                    },),
+            label: _('Slight blur & dim'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
@@ -160,18 +145,12 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
 
         // these buttons either export or import saved JSON data
         const buttonImportData = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'document-send-symbolic',
-                        label: _('Import'),
-                    },),
+            label: _('Import'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
         const buttonExportData = new Gtk.Button( {
-            child: new Adw.ButtonContent({
-                        icon_name: 'document-save-symbolic',
-                        label: _('Export'),
-                    },),
+            label: _('Export'),
             valign: Gtk.Align.CENTER, 
             halign: Gtk.Align.CENTER,
         });
@@ -179,27 +158,28 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
         json_actionrow.add_suffix(buttonImportData);
         json_actionrow.add_suffix(buttonExportData);
 
-        version_button.set_label(this.metadata.version.toString());      
+        version_row.set_subtitle(this.metadata.version.toString());
        
         try {
             httpSession = new Soup.Session();
             httpSession.user_agent = 'User-Agent: Mozilla/5.0 (X11; GNOME Shell/' + Config.PACKAGE_VERSION + '; Linux x86_64; +https://github.com/neffo/bing-wallpaper-gnome-extension ) BingWallpaper Gnome Extension/' + this.metadata.version;
         }
         catch (e) {
-            log("Error creating httpSession: " + e);
+            BingLog("Error creating httpSession: " + e);
         }
         const icon_image = buildable.get_object('icon_image');
+        const app_icon_image = buildable.get_object('app_icon_image');
         
         // check that these are valid (can be edited through dconf-editor)
         Utils.validate_resolution(settings);
-        Utils.validate_icon(settings, this.path, icon_image);
+        Utils.validate_icon(settings, this.path, icon_image, app_icon_image);
         Utils.validate_interval(settings);
 
         // Indicator & notifications
         settings.bind('hide', hideSwitch, 'active', Gio.SettingsBindFlags.DEFAULT);
         settings.bind('notify', notifySwitch, 'active', Gio.SettingsBindFlags.DEFAULT);
         settings.connect('changed::icon-name', () => {
-            Utils.validate_icon(settings, this.path, icon_image);
+            Utils.validate_icon(settings, this.path, icon_image, app_icon_image);
             iconEntry.set_value(1 + Utils.icon_list.indexOf(settings.get_string('icon-name')));
         });
                
@@ -245,7 +225,7 @@ export default class BingWallpaperExtensionPreferences extends ExtensionPreferen
             dirChooser.set_initial_folder(Gio.File.new_for_path(Utils.getWallpaperDir(settings)));
             dirChooser.select_folder(window, null, (self, res) => {
                 let new_path = self.select_folder_finish(res).get_uri().replace('file://', '');
-                log(new_path);
+                BingLog(new_path);
                 Utils.moveImagesToNewFolder(settings, Utils.getWallpaperDir(settings), new_path);
                 Utils.setWallpaperDir(settings, new_path);
             });

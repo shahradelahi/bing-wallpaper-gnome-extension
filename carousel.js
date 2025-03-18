@@ -1,5 +1,5 @@
 // Bing Wallpaper GNOME extension
-// Copyright (C) 2017-2023 Michael Carroll
+// Copyright (C) 2017-2025 Michael Carroll
 // This extension is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -30,7 +30,7 @@ export default class Carousel {
         this.searchEntry = null;
         this.extensionPath = extensionPath
         
-        this.log('create carousel...');
+        this._log('create carousel...');
 
         this.flowBox = prefs_flowbox;  
         this.flowBox.insert(this._create_placeholder_item(), -1);
@@ -43,11 +43,6 @@ export default class Carousel {
     }
 
     _create_gallery() {
-        Utils.randomIntervals.forEach((x) => {
-            let item = this._create_random_item(x.value, _(x.title));
-            this.flowBox.insert(item, -1);
-        });
-
         this.imageList.forEach((image) => {
             let item = this._create_gallery_item(image);
             this.flowBox.insert(item, -1);
@@ -72,7 +67,7 @@ export default class Carousel {
 
         if (Utils.isFavourite(image)) {
             favButton.set_visible(false);
-            this.log('image is favourited');
+            this._log('image is favourited');
         }
         else {
             unfavButton.set_visible(false);
@@ -84,7 +79,7 @@ export default class Carousel {
         catch (e) {
             galleryImage.set_from_icon_name('image-missing');
             galleryImage.set_icon_size = 2; // Gtk.GTK_ICON_SIZE_LARGE;
-            this.log('create_gallery_image: '+e);
+            this._log('create_gallery_image: '+e);
         }
 
         galleryImage.set_tooltip_text(image.copyright);
@@ -96,16 +91,16 @@ export default class Carousel {
 
         applyButton.connect('clicked', () => {
             this.settings.set_string('selected-image', Utils.getImageUrlBase(image));
-            this.log('gallery selected '+Utils.getImageUrlBase(image));
+            this._log('gallery selected '+Utils.getImageUrlBase(image));
         });
 
         infoButton.connect('clicked', () => {
             Utils.openInSystemViewer(image.copyrightlink, false);
-            this.log('info page link opened '+image.copyrightlink);
+            this._log('info page link opened '+image.copyrightlink);
         });
 
         deleteButton.connect('clicked', (widget) => {
-            this.log('Delete requested for '+filename);
+            this._log('Delete requested for '+filename);
             Utils.deleteImage(filename);
             Utils.setImageHiddenStatus(this.settings, image.urlbase, true);
             Utils.purgeImages(this.settings); // hide image instead
@@ -116,7 +111,7 @@ export default class Carousel {
 
         // button is unchecked, so we want to make the checked one visible
         favButton.connect('clicked', (widget) => {
-            this.log('favourited '+Utils.getImageUrlBase(image));
+            this._log('favourited '+Utils.getImageUrlBase(image));
             widget.set_visible(false);
             unfavButton.set_visible(true);
             Utils.setImageFavouriteStatus(this.settings, image.urlbase, true);
@@ -124,34 +119,13 @@ export default class Carousel {
 
         // button is checked, so we want to make the unchecked one visible
         unfavButton.connect('clicked', (widget) => {
-            this.log('unfavourited '+Utils.getImageUrlBase(image));
+            this._log('unfavourited '+Utils.getImageUrlBase(image));
             widget.set_visible(false);
             favButton.set_visible(true);
             Utils.setImageFavouriteStatus(this.settings, image.urlbase, false);
         });
         
         let item = buildable.get_object('flowBoxChild');
-        return item;
-    }
-
-    _create_random_item(interval, title) {
-        let buildable = new Gtk.Builder();
-
-        // grab appropriate object from UI file
-        buildable.add_objects_from_file(this.extensionPath + '/ui/carousel4.ui', ["flowBoxRandom"]);
-
-        let randomLabel = buildable.get_object('randomLabel');
-        randomLabel.set_text(title);
-        let filename = 'random';
-        let applyButton = buildable.get_object('randomButton');
-
-        applyButton.connect('clicked', (widget) => {
-            this.settings.set_string('random-interval-mode', interval);
-            this.settings.set_boolean('random-mode-enabled', true);
-            this.log('gallery selected random with interval '+interval+' ('+title+')');
-        });
-
-        let item = buildable.get_object('flowBoxRandom');
         return item;
     }
 
@@ -212,7 +186,7 @@ export default class Carousel {
             }
             catch (e) {
                 this._set_blank_image(galleryImage);
-                this.log('create_gallery_image: '+e);
+                this._log('create_gallery_image: '+e);
             }
         }
     }
@@ -222,7 +196,7 @@ export default class Carousel {
             //galleryImage.set_icon_size = 2; // Gtk.GTK_ICON_SIZE_LARGE;
     }
 
-    log(msg) {
+    _log(msg) {
         if (this.settings.get_boolean('debug-logging'))
             console.log("BingWallpaper extension: " + msg); // disable to keep the noise down in journal
     }

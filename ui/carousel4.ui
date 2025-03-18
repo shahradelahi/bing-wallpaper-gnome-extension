@@ -68,6 +68,9 @@ Author: Michael Carroll
             <property name="orientation">vertical</property>
             <property name="vexpand">1</property>
             <property name="valign">center</property>
+            <style>
+                <class name="linked"/>
+            </style>
             <child>
               <object class="GtkButton" id="favButton">
                 <property name="tooltip-text" translatable="yes">Favorite</property>

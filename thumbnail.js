@@ -1,5 +1,5 @@
 // Bing Wallpaper GNOME extension
-// Copyright (C) 2017-2023 Michael Carroll
+// Copyright (C) 2017-2025 Michael Carroll
 // This extension is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -23,7 +23,7 @@ export default class Thumbnail {
             this.pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(filePath, w, h);
             this.srcFile = Gio.File.new_for_path(filePath);
         } catch (err) {
-            log('Unable to create thumbnail for corrupt or incomplete file: ' + filePath + ' err: ' + err);
+            console.log('Unable to create thumbnail for corrupt or incomplete file: ' + filePath + ' err: ' + err);
         }
     }
 };

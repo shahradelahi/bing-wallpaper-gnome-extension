@@ -23,7 +23,7 @@ Bing Wallpaper GNOME extension by: Michael Carroll
     <requires lib="gtk" version="4.0"/>
     <requires lib="libadwaita" version="1.0"/>
     <object class="AdwPreferencesPage" id="settings_page">
-        <property name="icon-name">emblem-photos-symbolic</property>
+        <property name="icon-name">applications-system-symbolic</property>
         <property name="title" translatable="yes">Settings</property>
         <child>
             <object class="AdwPreferencesGroup" id="ui_group">
@@ -110,7 +110,7 @@ Bing Wallpaper GNOME extension by: Michael Carroll
         </child>
     </object>
     <object class="AdwPreferencesPage" id="lockscreen_page">
-        <property name="icon-name">applications-system-symbolic</property>
+        <property name="icon-name">system-lock-screen-symbolic</property>
         <property name="title" translatable="yes">Lock screen</property>
         <child>
             <object class="AdwPreferencesGroup" id="ls_group">
@@ -163,7 +163,7 @@ Bing Wallpaper GNOME extension by: Michael Carroll
         </child>
     </object>
     <object class="AdwPreferencesPage" id="gallery_page">
-        <property name="icon-name">document-open-recent-symbolic</property>
+        <property name="icon-name">emblem-photos-symbolic</property>
         <property name="title" translatable="yes">Gallery</property>
         <child>
             <object class="GtkScrolledWindow" id="carouselViewPort">
@@ -286,7 +286,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
             <!-- <property name="orientation">vertical</property>-->
             <child>
                 <object class="GtkImage" id="app_icon_image">
-                <property name="pixel-size">128</property>
+                <property name="pixel-size">64</property>
+                <property name="margin-bottom">8</property>
                 <property name="accessible-role">presentation</property>
                 <style>
                     <class name="icon-dropshadow"/>
@@ -324,17 +325,11 @@ Bing Wallpaper GNOME extension by: Michael Carroll
         <child>
           <object class="AdwPreferencesGroup" id="change_log_group">
             <child>
-              <object class="AdwActionRow" id="details_row">
+              <object class="AdwActionRow" id="version_row">
                 <property name="title" translatable="yes">Version</property>
-                <child>
-                    <object class="GtkButton" id="version_button">
-                    <property name="halign">center</property>
-                    <property name="can-shrink">True</property>
-                    <style>
-                        <class name="app-version"/>
-                    </style>
-                    </object>
-                </child>
+                <style>
+                    <class name="property"/>
+                </style>
               </object>
             </child>
             <child>
@@ -367,6 +362,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="extension_page_linkbutton">
                                     <property name="uri">https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/</property>
+                                    <property name="label">GNOME Extensions</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
@@ -386,6 +383,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="source_code_linkbutton">
                                     <property name="uri">https://github.com/neffo/bing-wallpaper-gnome-extension</property>
+                                    <property name="label">GitHub</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
@@ -405,6 +404,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="bug_report_linkbutton">
                                     <property name="uri">https://github.com/neffo/bing-wallpaper-gnome-extension/issues</property>
+                                    <property name="label">GitHub</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
@@ -424,6 +425,8 @@ Bing Wallpaper GNOME extension by: Michael Carroll
                             <child>
                                 <object class="GtkLinkButton" id="contributors_linkbutton">
                                     <property name="uri">https://github.com/neffo/bing-wallpaper-gnome-extension/graphs/contributors</property>
+                                    <property name="label">GitHub</property>
+                                    <property name="valign">GTK_ALIGN_CENTER</property>
                                 </object>
                             </child>
                             <child>
