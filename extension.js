@@ -1,5 +1,5 @@
 // Bing Wallpaper GNOME extension
-// Copyright (C) 2017-2023 Michael Carroll
+// Copyright (C) 2017-2025 Michael Carroll
 // This extension is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -21,8 +21,7 @@ import {Button} from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import * as Config from 'resource:///org/gnome/shell/misc/config.js';
 
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Utils from './utils.js';
 import Blur from './blur.js';
 import Thumbnail from './thumbnail.js';
