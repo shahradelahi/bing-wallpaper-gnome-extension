@@ -82,7 +82,7 @@ function getMarket() {
       // bingWallpaperIndicator._settings.set_string('market', market); // Maybe?
     }
   }
-  BingLog(`Market is to ${market}`);
+  BingLog(`Market is ${market}`);
   return market;
 }
 
